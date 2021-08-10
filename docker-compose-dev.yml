@@ -48,7 +48,7 @@ services:
       - 5432:5432
     environment:
       POSTGRES_USER: ${DB_USERNAME}
-      POSTGRES_PASS: ${DB_PASSWORD}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DBNAME: ${DB_DATABASE}
     volumes:
       - ./docker/postgres/datadir:/var/lib/postgresql/data
