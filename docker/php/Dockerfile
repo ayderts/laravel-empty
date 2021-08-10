@@ -18,7 +18,7 @@ RUN rm -f /etc/localtime \
 ADD https://raw.githubusercontent.com/mlocati/docker-php-extension-installer/master/install-php-extensions /usr/local/bin/
 RUN chmod uga+x /usr/local/bin/install-php-extensions \
     && sync \
-    && install-php-extensions --cleanup gd intl pdo_pgsql soap zip bcmath
+    && install-php-extensions --cleanup gd intl pdo_pgsql soap zip bcmath xmlrpc mbstring pcntl
 
 # REDIS
 RUN mkdir -p /usr/src/php/ext/redis \
